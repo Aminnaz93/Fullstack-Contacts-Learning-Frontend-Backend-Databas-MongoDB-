@@ -1,0 +1,23 @@
+1. Client (ThunderClient, Postman, Frontend) -> skickar request
+t.ex skickar en post request /api/contacts
+body: {name: "Amin", email: ....}
+
+2. Server.js tar emot request -> (skickar den till routes)
+
+3. Routes matchar URL och metod ->(Validerar jwt token först) om ok sen next() och sen då anropas controller(där metoden är (CRUD))
+
+4. controller -> eftersom det är post så väljer den rätt metod. createContact()
+-hämtar data från req.body
+-validerar datan(inget saknas)
+-anropar databas.create()
+
+5. ContactModel -> mongoose
+-validerar mot schema 
+-sparar i mongoDB
+
+6. mongoose objektet i vårt response
+
+7. controllern skickar json-svar till oss 
+
+8. Client får svar med ny kontakt + ID
+

@@ -1,0 +1,31 @@
+HOMEPAGE (LOG IN) (loginpage) ("/") POST login
+
+REGISTER page POST REGISTER
+Contacts page ("/contacts)
+-se sina kontakter GET contacts
+-skapa en ny kontakt POST createContact 
+-ta bort osv... DELETE osv...
+
+api.js (Här hanteras all kommunikation med API:et)
+-abstraktioner lager(service lager)
+
+just nu.
+api.js  -> "ROPAR UT" AuthChange
+window -> sänder ut överallt
+app.js -> lyssnar och reagerar 
+
+
+VAD ÄR CONTEXT?
+- Ett globalt "delat minne" i appen
+
+a) skapa context createContext
+
+b) Provider 
+- vad är det som ska delas? 
+- funktioner hur state ändras (login, logout)
+- bestämmer vi vad som skickas ut {authed, login, logout}
+
+c) Hook useAuth useCart
+- hur man använder sig av contexten
+- useContext (authContext) (utan hook)
+- useAuth()
