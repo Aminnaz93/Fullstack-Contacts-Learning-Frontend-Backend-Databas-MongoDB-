@@ -45,6 +45,7 @@ const registerUser = asyncHandler (async (req, res) => {
     //spara i mongodb
 console.log("User created:", user);
 
+// Skicka tillbaka user data om skapandet lyckades
 if(user){
     res.status(201).json({
         _id: user.id,
@@ -52,6 +53,7 @@ if(user){
         email: user.email
     });
 } else{
+    // Något gick fel med datan
     res.status(400);
     throw new Error("User data is not valid.");
 }

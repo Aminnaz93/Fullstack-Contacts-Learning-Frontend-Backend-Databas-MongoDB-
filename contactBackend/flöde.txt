@@ -15,7 +15,7 @@ body: {name: "Amin", email: ....}
 -validerar mot schema 
 -sparar i mongoDB
 
-6. mongoose objektet i vårt response
+6. mongoose sparar objektet i vårt response
 
 7. controllern skickar json-svar till oss 
 
